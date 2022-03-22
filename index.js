@@ -254,7 +254,7 @@ class ConcatPlugin {
         const processCompiling = (compilation, callback) => {
             self.filesToConcatAbsolutePromise.then(filesToConcatAbsolute => {
                 for (const file of filesToConcatAbsolute) {
-                    compilation.fileDependencies.add(path.relative(compiler.options.context, file));
+                    compilation.fileDependencies.add(file);
                 }
                 if (!dependenciesChanged(compilation, filesToConcatAbsolute)) {
                     return callback();
