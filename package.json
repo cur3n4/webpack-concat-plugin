@@ -4,7 +4,6 @@
   "author": "mcler",
   "description": "Webpack file concatenation.",
   "license": "ISC",
-  "main": "./release.js",
   "scripts": {
     "build": "babel index.js --out-file release.js",
     "publish:latest": "npm run build && npm publish --access public --tag latest",
